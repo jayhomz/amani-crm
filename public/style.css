@@ -1,0 +1,46 @@
+body {
+	background: url('bg-phone.jpeg') center center no-repeat;
+}
+
+.card {
+	width: 40rem;
+	margin: 35vh auto;
+	opacity: 1;
+	background-color: rgba(255, 255, 255, 0.9)
+}
+
+.card-body a {
+	text-decoration: none;
+	margin-right: 20px;
+	margin-top: 20px;	
+	margin-bottom: 40px;
+}
+
+.card button {
+	width: 100%;
+}
+
+.card button:hover {
+	cursor: pointer;
+}
+
+.card-footer {
+	background: inherit;
+}
+
+.card-footer a {
+	color: #000;
+}
+
+.card-footer p {
+	text-decoration: underline;
+	cursor: pointer;	
+}
+
+.f-font {
+	font-size: 30px !important;
+}
+
+a {
+	color: #fff;
+}
