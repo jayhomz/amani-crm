@@ -1,5 +1,6 @@
 body {
 	background: url('bg-phone.jpeg') center center no-repeat;
+	background-size: cover;
 }
 
 .card {

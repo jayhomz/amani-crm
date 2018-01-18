@@ -194,18 +194,16 @@ function update_call_back_time($date, $time) {
   $clientid = $_SESSION["id"];
   
   $query = "UPDATE clients_info SET ";
-  $query .= "call_back_date = {$date}, ";
-  $query .= "call_back_time = {$time} ";  
+  $query .= "call_back_date = '{$date}', ";
+  $query .= "call_back_time = '{$time}' ";  
   $query .= "WHERE client_id = {$clientid}";
 
   $result = mysqli_query($connect, $query);
 
   // see if query connection failed
-  if($result) {
-    
-  } else {
+  if(!$result) {
     die("Database connection failed");
-    }
+  }
 }
 
 function select_items() {
@@ -215,7 +213,7 @@ function select_items() {
   $clientid = $_SESSION["id"];
 
   $query = "SELECT * ";
-  $query .= "FROM clients_info WHERE client_id = {$clientid}";
+  $query .= "FROM clients_info";
 
   $result = mysqli_query($connect, $query);
 

@@ -26,10 +26,6 @@
     <thead>
         <tr>
         <th scope="col">Name
-            <?php 
-                select_items();
-                while ($users = mysqli_fetch_assoc($result)) {
-            ?>
         </th>
         <th scope="col">Interest</th>
         <th scope="col">Back Up devices</th>
@@ -42,7 +38,31 @@
     </thead>
     <tbody>
         <tr>
-        <th scope="row"><?php select_user(); echo($username); ?></th>
+        <?php 
+            select_items();
+            while ($users = mysqli_fetch_assoc($result)) {
+        ?>
+
+        <th scope="row">
+        
+            <?php
+          
+            $clientid = $users['client_id'];  
+            
+            if($clientid == 1) {
+                echo('John');
+            } elseif ($clientid == 2) {
+                echo('Ann');
+
+                } elseif($clientid == 3) {
+                    echo('Mary');
+                    }
+
+            ?>
+            
+        </th>
+        
+            
         <td><?php echo($users['interest']) ?></td>
         <td><?php echo($users['backup_devices']) ?>t</td>
         <td><?php echo($users['email']) ?></td>
